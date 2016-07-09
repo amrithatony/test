@@ -50,19 +50,16 @@ Southwest monsoon and Northeast monsoon occur. These monsoons are the main dynam
 ##Approaches considered for solving the problem
 ###Approach 1
 Retrieve the historical weather data of past 10 years from a reliable source for the selected weather stations. 
-Create linear regression model for continuous variables like temperature, pressure, relative humidity based on the historical data and 
-logistic regression for categorical variables like conditions(snowy, cloudy, rainy, sunny).We will be able to generate test data for any 
-year using this model.
+Derive a regression equation based on the history data and predict the current value
+
 ######Pros:
-* Simple method
-* Less time involved for implemeting the model
+* Easy to implement
+* Better accuracy
 
 ######Cons:
-* The model will not incorporate the requirements of considering geographic,topographic,oceanographic factors 
+* As the problem statement clearly mention to consider geographic,topographic,oceanographic factors,the assumption is that this is **not** the expected approach for problem resolution
 * The model will not incorporate the requirements of considering the dynamic factors which evolves over time
 
-######Conclusion: 
-This is not the expected approach for the problem statement.
 
 
 
