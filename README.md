@@ -48,7 +48,7 @@ Size of area considered will be approximately half the size of Australia.
 Indian subcontinent is surrounded by Indian ocean and it has Western Ghats(mountain) and Himalayas. Due to this geographical positioning, proximity to ocean and the topology varaiations, two monsoon monsoon seasons - 
 Southwest monsoon and Northeast monsoon occur. These monsoons are the main dynamic factor incfluencing the climate of Indian subcontinent.
 ##Approaches considered for solving the problem
-###Approach 1
+###Approach 1 - Based on historical data
 Retrieve the historical weather data of past 10 years from a reliable source for the selected weather stations. 
 Derive a regression equation based on the history data and predict the current value
 
@@ -61,7 +61,19 @@ Derive a regression equation based on the history data and predict the current v
 * The model will not incorporate the requirements of considering the dynamic factors which evolves over time
 
 
+###Approach 2 - Mathematical modelling of weather data
 
+Mathematical modellling of the parameters affecting weather is created. Influence of both static parameters(topography, geography, proximity to sea etc.) and dynamic parameters(monsoon clouds from Indian ocean, cold waves from central Asia) are included in the model.
+
+###Approach 3 - 
+This approach is a combination of approach 1 and 2. As the mathematical modelling of cloud movement will take multiple days for implementation,the probability of clouds in different stations are configured, based on the movement pattern of monsoon clouds. For example, in Kochi the monsoon clouds will be present during the months June - September, so the probability of clouds in Kochi can be configured between 0.75 to 1 during these months and 0 to 0.5 during other months.
+
+and north east monsoon clouds will be there present during months October-November. 
+
+Monthly average minimum and monthly average maximum of temperature, pressure, relative humidity for different weather stations are retrieved from reliable sources. 
+A linear equation is derived 
+
+Pressure is inversely 
 
 
 
