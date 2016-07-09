@@ -56,9 +56,11 @@ year using this model.
 ######Pros:
 * Simple method
 * Less time involved for implemeting the model
---######Cons:
+
+######Cons:
 * The model will not incorporate the requirements of considering geographic,topographic,oceanographic factors 
 * The model will not incorporate the requirements of considering the dynamic factors which evolves over time
+
 ######Conclusion: 
 This is not the expected approach for the problem statement.
 
