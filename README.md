@@ -108,7 +108,12 @@ This approach is a combination of approach 1 and 2.
   - The elevation in hectofeet(1 hectofeet=100 feets)at a weather station is looked up in the table to obtain the atmospheric pressure in hPa.
 
  
-
+##Architectural Design Considerations
+* Ability to generate weather data in realistic fashion by taking into account the dynamic factors like monsoon clouds and cold waves which varies across seasons and geography.
+* Ability to add new weather stations and its configuration data without rebuilding the code.
+* Fine grained control of weather influencing parameters of each station across seasons
+* Ability to plug in future enhancements - Instead of manually configuring dynamic parameters like monsoon cloud movement, probability of clouds can be generated using mathematical modelling.
+* 
 Pressure is inversely 
 
 
