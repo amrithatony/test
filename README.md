@@ -121,12 +121,20 @@ This approach is a combination of approach 1 and 2.
 * Fine grained control of weather influencing parameters of each station across seasons
 * Ability to plug in future enhancements - Instead of manually configuring dynamic parameters like monsoon cloud movement, probability of clouds can be generated using mathematical modelling.
 
-##Configuring weather influencing parameters
-* Add a station under the 
-* 
+##Configuring and running weather influencing parameters
+1. Perform mvn install at the project base folder
+2. Folder name 'config' will be generated in the project base folder
+3. Edit 'stations.json' to add a new station
+4. Under config/weather, add a new folder with IATA code(as folder name) which contains weather details
+5. Under config/cloudProbability, add a file which contains the monsoon cloud probabilities of the new station for all months
+6. Change directory to project base folder and run *java -jar WeatherGenerator.jar* 
+7. Start date of the clock can be send as a command line argument in format YYYY-MM-DD.
+
 
 
 ##Running weather data generator
+
+##Future enhancements
 
 
 
