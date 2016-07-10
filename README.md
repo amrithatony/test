@@ -103,7 +103,7 @@ This approach is a combination of approach 1 and 2.
     -![Graph-Weather condition - Cloud probabilty mapping](/images/Weather Condition and Cloud Probability.png) 
     - If the actual temperature calculated in step 6 is less than 0 then weather condition is 'Snowy'
 * __Step 8__ - Calculation of atmospheric pressure in hPa.
-  - Atmospheric pressure is considered as a dependent variable of Elevation. 
+  - Atmospheric pressure is considered as a dependent variable of Elevation, Temperature and relative humidity. 
   - A look up table of pressure and altitide which represents the pressure variation with respect to altitude above sea level is used for this. 
   - The elevation in hectofeet(1 hectofeet=100 feets)at a weather station is looked up in the table to obtain the atmospheric pressure in hPa.
 
