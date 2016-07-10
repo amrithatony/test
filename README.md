@@ -82,7 +82,7 @@ This approach is a combination of approach 1 and 2.
 
   - The general pattern of diurnal temperature variation is  that temperature increases from 4AM in morning till 1PM noon, and after 1PM it reduces till 4AM in morning(next day). 
   - A graph is plotted based on the above pattern and the monthly average minimum temperature and monthly average maximum temperature collected in step 1.
-  ![Graph-Temperature Vs Time](/images/Temperature Vs Time.png)
+  - ![Graph-Temperature Vs Time](/images/Temperature Vs Time.png)
   - From the graph, the slope m1 and intercept c1 are calculated for the time between 4AM and 1PM during which temperature is rising.
   - The slope m2 and intercept c2 are calculated for the time between 1PM and 4AM(next day) during which temperature is reducing.
   - The equation of 2 lines are obtained using the above values.
@@ -103,12 +103,11 @@ This approach is a combination of approach 1 and 2.
     -![Graph-Weather condition - Cloud probabilty mapping](/images/Weather Condition and Cloud Probability.png) 
     - If the actual temperature calculated in step 6 is less than 0 then weather condition is 'Snowy'
 * __Step 8__ - Calculation of atmospheric pressure in hPa.
-  - 
+  - Atmospheric pressure is considered as a dependent variable of Elevation. 
+  - A look up table of pressure and altitide which represents the pressure variation with respect to altitude above sea level is used for this. 
+  - The elevation in hectofeet(1 hectofeet=100 feets)at a weather station is looked up in the table to obtain the atmospheric pressure in hPa.
 
  
-    - \there is no temperature adjustment as there is no much influence of
-Monthly average minimum and monthly average maximum of temperature, pressure, relative humidity for different weather stations are retrieved from reliable sources. 
-A linear equation is derived 
 
 Pressure is inversely 
 
