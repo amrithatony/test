@@ -66,8 +66,16 @@ Derive a regression equation based on the history data and predict the current v
 Mathematical modellling of the parameters affecting weather is created. Influence of both static parameters(topography, geography, proximity to sea etc.) and dynamic parameters(monsoon clouds from Indian ocean, cold waves from central Asia) are included in the model.
 
 ###Approach 3 - 
-This approach is a combination of approach 1 and 2. As the mathematical modelling of cloud movement will take multiple days for implementation,the probability of clouds in different stations are configured, based on the movement pattern of monsoon clouds. For example, in Kochi the monsoon clouds will be present during the months June - September, so the probability of clouds in Kochi can be configured between 0.75 to 1 during these months and 0 to 0.5 during other months.
+This approach is a combination of approach 1 and 2. 
 
+* Step 1 -
+ * Step 1a - Retrieve the montlhy average minimum and monthly average maximum of temperature and humidity of required weather stations from a reliable source. Load the data to model.
+ * Step 1b - Load the probabilty range of clouds for different weather stations based on the movement pattern of monsoon clouds.
+ * Step 1c - Load the lookup table of pressure and altitide- represents the pressure variation with respect to altitude above sea level.
+* Step 2 - Initialize the clock with the command line argument. Date should be given as command line argument in the format 'YYYY-MM-DD'. The clock will be incremented by 1 hour.
+* Step 3 - Calculate cloud probability at different weather stations - As the mathematical modelling of cloud movement will take multiple days for implementation,the probability range of clouds in different stations are configured, based on the movement pattern of monsoon clouds. For example, in Kochi the monsoon clouds will be present during the months June - September, so the probability of clouds in Kochi can be configured between 0.75 to 1 during these months and 0 to 0.5 during other months.
+* Step 4 - Calculate temperature based on the time(hour) of the day. 
+![Graph-Temperature Vs Time](/images/Temperature Vs Time.png)
 and north east monsoon clouds will be there present during months October-November. 
 
 Monthly average minimum and monthly average maximum of temperature, pressure, relative humidity for different weather stations are retrieved from reliable sources. 
