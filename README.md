@@ -77,7 +77,7 @@ This approach is a combination of approach 1 and 2.
 * __Step 4__ - Calculate temperature based on the time(hour) of the day. 
 
   - The general pattern of diurnal temperature variation is  that temperature increases from 4AM in morning till 1PM noon, and after 1PM it reduces till 4AM in morning(next day). 
-  -A graph is plotted based on the above pattern and the monthly average minimum temperature and monthly average maximum temperature collected in step 1.
+  - A graph is plotted based on the above pattern and the monthly average minimum temperature and monthly average maximum temperature collected in step 1.
   ![Graph-Temperature Vs Time](/images/Temperature Vs Time.png)
   - From the graph, the slope m1 and intercept c1 are calculated for the time between 4AM and 1PM during which temperature is rising.
   - The slope m2 and intercept c2 are calculated for the time between 1PM and 4AM(next day) during which temperature is reducing.
