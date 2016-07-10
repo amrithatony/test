@@ -63,7 +63,13 @@ Derive a regression equation based on the history data and predict the current v
 
 ###Approach 2 - Mathematical modelling of weather data
 
-Mathematical modellling of the parameters affecting weather is created. Influence of both static parameters(topography, geography, proximity to sea etc.) and dynamic parameters(monsoon clouds from Indian ocean, cold waves from central Asia) are included in the model.
+ - Mathematical modellling of the parameters affecting weather is created.
+ - Influence of both static parameters(topography, geography, proximity to sea etc.) and dynamic parameters(monsoon clouds from Indian ocean, cold waves from central Asia) are included in the model.
+ - ![Cloud movement mathematical model](/images/Cloud Movement.png)
+ - The area under which the monsoon clouds are present is represented as a circle in the above diagram. 
+ - The cloud (circle)movement path towards Northeast India is indicated as red lines.
+ - The weather stations which come inside the circle can be assumed as affected by the monsoon clouds. 
+ - 
 
 ###Approach 3 - 
 This approach is a combination of approach 1 and 2. 
@@ -109,12 +115,13 @@ This approach is a combination of approach 1 and 2.
 
  
 ##Architectural Design Considerations
-* Ability to generate weather data in realistic fashion by taking into account the dynamic factors like monsoon clouds and cold waves which varies across seasons and geography.
+* Ability to generate weather data in realistic fashion by taking into account dynamic factors like monsoon clouds and cold waves which varies across seasons and geography.
 * Ability to add new weather stations and its configuration data without rebuilding the code.
 * Fine grained control of weather influencing parameters of each station across seasons
 * Ability to plug in future enhancements - Instead of manually configuring dynamic parameters like monsoon cloud movement, probability of clouds can be generated using mathematical modelling.
-* 
-Pressure is inversely 
+
+##Configuring weather influencing parameters
+* Add a station under the 
 
 
 
