@@ -68,14 +68,23 @@ Mathematical modellling of the parameters affecting weather is created. Influenc
 ###Approach 3 - 
 This approach is a combination of approach 1 and 2. 
 
-* Step 1 -
- * Step 1a - Retrieve the montlhy average minimum and monthly average maximum of temperature and humidity of required weather stations from a reliable source. Load the data to model.
- * Step 1b - Load the probabilty range of clouds for different weather stations based on the movement pattern of monsoon clouds.
- * Step 1c - Load the lookup table of pressure and altitide- represents the pressure variation with respect to altitude above sea level.
-* Step 2 - Initialize the clock with the command line argument. Date should be given as command line argument in the format 'YYYY-MM-DD'. The clock will be incremented by 1 hour.
-* Step 3 - Calculate cloud probability at different weather stations - As the mathematical modelling of cloud movement will take multiple days for implementation,the probability range of clouds in different stations are configured, based on the movement pattern of monsoon clouds. For example, in Kochi the monsoon clouds will be present during the months June - September, so the probability of clouds in Kochi can be configured between 0.75 to 1 during these months and 0 to 0.5 during other months.
-* Step 4 - Calculate temperature based on the time(hour) of the day. 
-![Graph-Temperature Vs Time](/images/Temperature Vs Time.png)
+* __Step 1__-
+ * __Step 1a__ - Retrieve the montlhy average minimum and monthly average maximum of temperature and humidity of required weather stations from a reliable source. Load the data to model.
+ * __Step 1b__ - Load the probabilty range of clouds for different weather stations based on the movement pattern of monsoon clouds.
+ * __Step 1c__ - Load the lookup table of pressure and altitide- represents the pressure variation with respect to altitude above sea level.
+* __Step 2__ - Initialize the clock with the command line argument. Date should be given as command line argument in the format 'YYYY-MM-DD'. The clock will be incremented by 1 hour.
+* __Step 3__ - Calculate monsoon cloud probability at different weather stations - As the mathematical modelling of cloud movement will take multiple days for implementation(mentioned in approach 2),the probability range of monsoon clouds in different stations are configured, based on the movement pattern of monsoon clouds. For example, in Kochi(COK) the monsoon clouds will be present during the months June - September, so the probability of clouds in Kochi can be configured between 0.75 to 1 during rainy season and 0 to 0.5 during other months.
+* __Step 4__ - Calculate temperature based on the time(hour) of the day. 
+
+  - The general pattern of diurnal temperature variation is  that temperature increases from 4AM in morning till 1PM noon, and after 1PM it reduces till 4AM in morning(next day). 
+  -A graph is plotted based on the above pattern and the monthly average minimum temperature and monthly average maximum temperature collected in step 1.
+  ![Graph-Temperature Vs Time](/images/Temperature Vs Time.png)
+  - From the graph, the slope m1 and intercept c1 are calculated for the time between 4AM and 1PM during which temperature is rising.
+  - The slope m2 and intercept c2 are calculated for the time between 1PM and 4AM(next day) during which temperature is reducing.
+  - The equation of 2 lines are obtained using the above values.
+  - Equation for time between 4Am and 1PM - y=m1*x+c1
+  - Equation for time between 1PM and 4AM(next day) - y=m2*x+c2
+  - The temperature values at any time of day can be calculated by substituting the time in 24 hour format as x. For calculating the temperature between 12AM to 4AM(next day), we have to add 24 to the hour.  The y value thus calculated using the equations give the temperture at that particular time of the day.
 and north east monsoon clouds will be there present during months October-November. 
 
 Monthly average minimum and monthly average maximum of temperature, pressure, relative humidity for different weather stations are retrieved from reliable sources. 
