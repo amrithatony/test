@@ -64,7 +64,7 @@ Derive a regression equation based on the history data and predict the current v
 ###Approach 2 - Mathematical modelling of weather data
 
  - Mathematical modellling of the parameters affecting weather is created.
- - Influence of both static parameters(topography, geography, proximity to sea etc.) and dynamic parameters(monsoon clouds from Indian ocean, cold waves from central Asia) are included in the model.
+ - Influence of both static parameters(topography, geography, proximity to sea etc.) and dynamic parameters(monsoon clouds from Indian ocean, cold waves from central Asia) can be included in the model.
  - ![Cloud movement mathematical model](/images/Cloud Movement.png)
  - The area under which the monsoon clouds are present is represented as a circle in the above diagram. 
  - The cloud (circle)movement path towards Northeast India is indicated as red lines.
