@@ -123,6 +123,11 @@ This approach is a combination of approach 1 and 2.
 
 ##Configuring weather influencing parameters
 * Add a station under the 
+* 
+
+
+##Running weather data generator
+
 
 
 
