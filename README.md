@@ -88,9 +88,25 @@ This approach is a combination of approach 1 and 2.
   - The equation of 2 lines are obtained using the above values.
   - Equation for time between 4Am and 1PM - y=m1*x+c1
   - Equation for time between 1PM and 4AM(next day) - y=m2*x+c2
-  - The temperature values at any time of day can be calculated by substituting the time in 24 hour format as x. For calculating the temperature between 12AM to 4AM(next day), we have to add 24 to the hour.  The y value thus calculated using the equations give the temperture at that particular time of the day.
-and north east monsoon clouds will be there present during months October-November. 
+  - The temperature values at any time of day can be calculated by substituting the time in 24 hour format as x. For calculating the temperature between 12AM to 4AM(next day), we have to add 24 to the hour.  The y value thus calculated using the equations give the temperature at that particular time of the day.
 
+* __Step 5__ - Calculate temperature adjustment due to clouds
+ - When the probability of monsoon clouds is between 0 and 0.5, there is no temperature adjustment as there is no much influence of clouds on temperature.
+ - When the probability of monsoon clouds is between 0.5 and 0.75, there is considerable impact for clouds on the temperature. So temperature adjustment has to be done based on the time of the day.
+    - During day time, the presence of clouds results in a decrease in temperature. So temperature should be reduced by a factor during day time.
+    - During night time, the presence of clouds results in increase in temperature. So temperature should be increased by a factor during night time.
+ - When the probability of monsoon clouds is between 0.75 and 1, there is a maximum probability of raining. So the temperature should be decreased by a factor.
+* __Step 6__ - Calculate actual temperature as a weighted sum of temperatures calculated in step 4 and step 5.
+* __Step 7__ - Determine the weather conditions based on the probability of monsoon clouds and actual temperature calculated in 
+    step 6. 
+    - The graph below represents the weather condition based on probability of monsoon clouds.
+    -![Graph-Weather condition - Cloud probabilty mapping](/images/Weather Condition and Cloud Probability.png) 
+    - If the actual temperature calculated in step 6 is less than 0 then weather condition is 'Snowy'
+* __Step 8__ - Calculation of atmospheric pressure in hPa.
+  - 
+
+ 
+    - \there is no temperature adjustment as there is no much influence of
 Monthly average minimum and monthly average maximum of temperature, pressure, relative humidity for different weather stations are retrieved from reliable sources. 
 A linear equation is derived 
 
