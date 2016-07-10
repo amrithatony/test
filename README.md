@@ -68,11 +68,10 @@ Derive a regression equation based on the history data and predict the current v
  - ![Cloud movement mathematical model](/images/Cloud Movement.png)
  - The area under which the monsoon clouds are present is represented as a circle in the above diagram. 
  - The cloud (circle)movement path towards Northeast India is indicated as red lines.
+ - **The approximate line equation of the cloud movement path, from the centre of circle to Himalayas is derived .**
  - The weather stations which come inside the circle can be assumed as affected by the monsoon clouds. 
- - The cold waves occur in North India mainly in places like Jammu & Kashmir, Uttar Pradesh etc. during the period -November to January which results in a drop in temperature in those places.
- - The cold waves may move towards north east India.
- - This movement of cold waves can also be modelled similar to the modelling of monsoon cloud movement.
-
+ - Similarly we can model the movement of cold waves occur in North India during winter season.
+ 
 ###Approach 3 - 
 This approach is a combination of approach 1 and 2. 
 
