@@ -73,7 +73,11 @@ This approach is a combination of approach 1 and 2.
  * __Step 1b__ - Load the probabilty range of clouds for different weather stations based on the movement pattern of monsoon clouds.
  * __Step 1c__ - Load the lookup table of pressure and altitide- represents the pressure variation with respect to altitude above sea level.
 * __Step 2__ - Initialize the clock with the command line argument. Date should be given as command line argument in the format 'YYYY-MM-DD'. The clock will be incremented by 1 hour.
-* __Step 3__ - Calculate monsoon cloud probability at different weather stations - As the mathematical modelling of cloud movement will take multiple days for implementation(mentioned in approach 2),the probability range of monsoon clouds in different stations are configured, based on the movement pattern of monsoon clouds. For example, in Kochi(COK) the monsoon clouds will be present during the months June - September, so the probability of clouds in Kochi can be configured between 0.75 to 1 during rainy season and 0 to 0.5 during other months.
+* __Step 3__ - Calculate monsoon cloud probability at different weather stations 
+
+ - As the mathematical modelling of cloud movement will take multiple days for implementation(mentioned in approach 2),the probability range of monsoon clouds in different stations are configured, based on the movement pattern of monsoon clouds. 
+ - Generate a random value of cloud probabaility within the configured range during every hour
+ - Example for probability range configuration of monsoon clouds - In Kochi(COK) the monsoon clouds will be present during the months    June - September, so the probability of clouds in Kochi can be configured between 0.5 to 1 during rainy season and 0 to 0.5 during    other months.
 * __Step 4__ - Calculate temperature based on the time(hour) of the day. 
 
   - The general pattern of diurnal temperature variation is  that temperature increases from 4AM in morning till 1PM noon, and after 1PM it reduces till 4AM in morning(next day). 
